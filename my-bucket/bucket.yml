@@ -1,6 +1,6 @@
 flows:
-  ac8fe47d-15e0-4eec-9060-d17d4e4794b9: {ver: 1, file: my-new-flow.snapshot, comments: initial
-      commit, author: anonymous, created: 1678174100726, flowName: my-new-flow, flowDesc: This
+  ac8fe47d-15e0-4eec-9060-d17d4e4794b9: {ver: 2, file: my-new-flow.snapshot, comments: implement
+      flow, author: anonymous, created: 1678177636179, flowName: my-new-flow, flowDesc: This
       is my new flow}
 layoutVer: 1
 bucketId: 57c6cf94-f383-423e-ba90-17fe1742d903

@@ -8,7 +8,40 @@
       "flowContents" : {
         "comments" : "",
         "componentType" : "PROCESS_GROUP",
-        "connections" : [ ],
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+            "id" : "eb44184f-5f4a-3d23-af0d-d2f55a81028b",
+            "instanceIdentifier" : "2c0a1093-013a-371a-c3cf-bb055cbd26d0",
+            "name" : "PutFile",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+          "identifier" : "c99deb1a-0feb-3170-9b0a-2468f2187147",
+          "instanceIdentifier" : "7e65992f-0628-3b32-148a-ec47549bbe10",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+            "id" : "42337a72-1ccd-34a3-877d-4fa006f8244a",
+            "instanceIdentifier" : "b6b9b9a4-5945-3e51-46b2-4de28cc35951",
+            "name" : "GenerateFlowFile",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
         "controllerServices" : [ ],
         "defaultBackPressureDataSizeThreshold" : "1 GB",
         "defaultBackPressureObjectThreshold" : 10000,
@@ -16,18 +49,204 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "b683852d-b005-36e9-8acb-d7657a102035",
+        "identifier" : "1e0c405a-3647-3b91-a676-c7953ab760af",
         "inputPorts" : [ ],
-        "instanceIdentifier" : "baf50dcc-0186-1000-7421-12b70057e800",
-        "labels" : [ ],
+        "instanceIdentifier" : "6d97d1e6-018c-1000-fa4e-8d7d4f26aade",
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+          "height" : 148.0,
+          "identifier" : "6e29480d-fe7a-307e-ad0a-2e305a0f85dc",
+          "instanceIdentifier" : "6d97fcd2-018c-1000-5749-365c503826f7",
+          "label" : "testing git sync",
+          "position" : {
+            "x" : 592.0000619611253,
+            "y" : 365.01171438534897
+          },
+          "style" : {
+            "font-size" : "12px"
+          },
+          "width" : 148.0,
+          "zIndex" : 0
+        } ],
         "name" : "MyProcessGroup",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 547.0,
-          "y" : 139.0
+          "x" : -1011.1721680368762,
+          "y" : 626.4891345736339
         },
         "processGroups" : [ ],
-        "processors" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+          "identifier" : "eb44184f-5f4a-3d23-af0d-d2f55a81028b",
+          "instanceIdentifier" : "2c0a1093-013a-371a-c3cf-bb055cbd26d0",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "PutFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 984.0,
+            "y" : 128.0
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "/data-transfer",
+            "Conflict Resolution Strategy" : "fail"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.24.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "1e0c405a-3647-3b91-a676-c7953ab760af",
+          "identifier" : "42337a72-1ccd-34a3-877d-4fa006f8244a",
+          "instanceIdentifier" : "b6b9b9a4-5945-3e51-46b2-4de28cc35951",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "GenerateFlowFile",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 472.0000033595569,
+            "y" : 120.99999711052777
+          },
+          "properties" : {
+            "character-set" : "UTF-8",
+            "File Size" : "0B",
+            "Batch Size" : "1",
+            "Unique FlowFiles" : "false",
+            "Data Format" : "Text"
+          },
+          "propertyDescriptors" : {
+            "character-set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "character-set",
+              "sensitive" : false
+            },
+            "File Size" : {
+              "displayName" : "File Size",
+              "identifiesControllerService" : false,
+              "name" : "File Size",
+              "sensitive" : false
+            },
+            "mime-type" : {
+              "displayName" : "Mime Type",
+              "identifiesControllerService" : false,
+              "name" : "mime-type",
+              "sensitive" : false
+            },
+            "generate-ff-custom-text" : {
+              "displayName" : "Custom Text",
+              "identifiesControllerService" : false,
+              "name" : "generate-ff-custom-text",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Unique FlowFiles" : {
+              "displayName" : "Unique FlowFiles",
+              "identifiesControllerService" : false,
+              "name" : "Unique FlowFiles",
+              "sensitive" : false
+            },
+            "Data Format" : {
+              "displayName" : "Data Format",
+              "identifiesControllerService" : false,
+              "name" : "Data Format",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "1 min",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+          "yieldDuration" : "1 sec"
+        } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
       },

@@ -1,6 +1,6 @@
 flows:
-  ac8fe47d-15e0-4eec-9060-d17d4e4794b9: {ver: 4, file: my-new-flow.snapshot, comments: '',
-    author: anonymous, created: 1702645973110, flowName: my-new-flow, flowDesc: This
-      is my new flow}
+  ac8fe47d-15e0-4eec-9060-d17d4e4794b9: {ver: 5, file: my-new-flow.snapshot, comments: try
+      with SSH, author: anonymous, created: 1702646089672, flowName: my-new-flow,
+    flowDesc: This is my new flow}
 layoutVer: 1
 bucketId: 57c6cf94-f383-423e-ba90-17fe1742d903
